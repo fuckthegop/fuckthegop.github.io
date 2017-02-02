@@ -20,7 +20,7 @@ $('.btn-shorten').on('click', function(){
         $('#url-field').val('http://' + $('#url-field').val());
     }
     
-    $.getJSON("https://api-ssl.bitly.com/v3/shorten?longUrl="+encodeURIComponent($('#url-field').val())+"&domain=fuckthe.gop&access_token=edad456550011a6323775d4ca83f4e459ee2028b&callback=?", callback);
+    $.getJSON("https://api-ssl.bitly.com/v3/shorten?longUrl="+encodeURIComponent($('#url-field').val())+"&domain=fuckthe.gop&access_token=69a54c096240838a7d09a908fc021a5f12fca7e8&callback=?", callback);
 
 });
 

@@ -14,7 +14,6 @@ $('.btn-shorten').on('click', function(){
         $('#link').hide().fadeIn('slow');
         $('#url-field').focus();
     };
-    //https://api-ssl.bitly.com/v3/shorten?access_token=edad456550011a6323775d4ca83f4e459ee2028b&domain=fuckthe.gop&longUrl=http%3A%2F%2Fgoogle.com%2F&format=json
     
     if(!/^(https?:\/\/)/.test($('#url-field').val())){
         $('#url-field').val('http://' + $('#url-field').val());

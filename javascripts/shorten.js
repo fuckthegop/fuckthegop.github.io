@@ -10,7 +10,7 @@ $('.btn-shorten').on('click', function(){
         $.post( "/add",{ url: url }).done(function( data ) {
             if(data.message.key){
                 var outUrl = "https://fuckthe.gop/" + data.message.key;
-                resultHTML = '<a class="result" id="foo" target="_blank" href="' + outUrl + '">'+ outUrl + '</a>';
+                resultHTML = '<a class="result" id="link" target="_blank" href="' + outUrl + '">'+ outUrl + '</a>';
                 resultHTML += '<button type="button" class="btn btn-info btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>'
             }
             else{

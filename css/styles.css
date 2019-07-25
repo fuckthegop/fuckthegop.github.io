@@ -23,6 +23,7 @@ body {
   color: #ffffff;
   background-color: #F89406;
   border: none;
+  margin-top: 0px;
 }
 
 .btn-shorten:hover,

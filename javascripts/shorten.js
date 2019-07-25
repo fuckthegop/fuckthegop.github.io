@@ -11,7 +11,7 @@ $('.btn-shorten').on('click', function(){
             if(data.message.key){
                 var outUrl = "https://fuckthe.gop/" + data.message.key;
                 resultHTML = '<a class="result" id="foo" target="_blank" href="' + outUrl + '">'+ outUrl + '</a>';
-                resultHTML += '<button type="button" class="btn btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>'
+                resultHTML += '<button type="button" class="btn btn-info btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>'
             }
             else{
                 resultHTML = 'invalid url.'

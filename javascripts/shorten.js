@@ -12,6 +12,9 @@ $('.btn-shorten').on('click', function(){
         else{
             resultHTML = 'invalid url.'
         }
+        $('#link').html(resultHTML);
+        $('#link').hide().fadeIn('slow');
+        $('#url-field').focus();
     });
     
 });

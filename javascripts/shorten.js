@@ -10,16 +10,18 @@ $('.btn-shorten').on('click', function(){
         $.post( "/add",{ url: url }).done(function( data ) {
             if(data.message.key){
                 var outUrl = "https://fuckthe.gop/" + data.message.key;
-                resultHTML = '<a class="result" id="link" target="_blank" href="' + outUrl + '">'+ outUrl + '</a>';
-                resultHTML += '<button type="button" class="btn btn-info btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>'
+                resultHTML = '<a class="result" id="url" target="_blank" href="' + outUrl + '">'+ outUrl + '</a>';
+                resultHTML += '<button type="button" class="btn btn-info btn-clipboard" title="">Copy</button>'
             }
             else{
                 resultHTML = 'invalid url.'
             }
             $('#link').html(resultHTML);
-            $('.btn-clipboard').tooltip()
             $('#link').hide().fadeIn('slow');
             $('#url-field').focus();
+            $('.btn-clipboard').on('click', function(){
+                copyToClipboard($('#url'));
+            });
         });
     }    
 });
@@ -30,9 +32,7 @@ $("#url-field").keyup(function(event){
     }
 });
 
-$('.btn-clipboard').on('click', function(){
-    copyToClipboard($('#link'));
-});
+
 
 function copyToClipboard(element) {
   var $temp = $("<input>");

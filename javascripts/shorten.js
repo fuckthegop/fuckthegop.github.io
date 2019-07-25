@@ -11,11 +11,13 @@ $('.btn-shorten').on('click', function(){
             if(data.message.key){
                 var outUrl = "https://fuckthe.gop/" + data.message.key;
                 resultHTML = '<a class="result" id="foo" target="_blank" href="' + outUrl + '">'+ outUrl + '</a>';
+                resultHTML += '<button type="button" class="btn btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</button>'
             }
             else{
                 resultHTML = 'invalid url.'
             }
             $('#link').html(resultHTML);
+            $('.btn-clipboard').tooltip()
             $('#link').hide().fadeIn('slow');
             $('#url-field').focus();
         });
@@ -28,7 +30,7 @@ $("#url-field").keyup(function(event){
     }
 });
 
-$('.btn-copy').on('click', function(){
+$('.btn-clipboard').on('click', function(){
     copyToClipboard($('#link'));
 });
 

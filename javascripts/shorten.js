@@ -2,7 +2,7 @@ var resultHTML;
 
 $('.btn-shorten').on('click', function(){
 
-    var url = encodeURIComponent($('#url-field').val());
+    var url = $('#url-field').val();
                                  
     $.post( "/add",{ url: url }).done(function( data ) {
         if(data.message.key){

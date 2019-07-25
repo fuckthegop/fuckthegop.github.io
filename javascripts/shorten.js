@@ -28,6 +28,10 @@ $("#url-field").keyup(function(event){
     }
 });
 
+$('.btn-copy').on('click', function(){
+    copyToClipboard($('#link'));
+});
+
 function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
